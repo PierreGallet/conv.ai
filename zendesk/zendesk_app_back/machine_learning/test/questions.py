@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from sendit.lib.questions import Questions
+from machine_learning.lib.questions import Questions
 import numpy as np
 
 

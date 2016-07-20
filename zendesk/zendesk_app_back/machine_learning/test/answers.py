@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from sendit.lib.answers import Answers
+from machine_learning.lib.answers import Answers
 
 
 class TestClassAnswers(unittest.TestCase):
