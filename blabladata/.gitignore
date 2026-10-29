@@ -1,0 +1,5 @@
+data/
+sfr/
+qa/
+*.pyc
+formatting/data/
