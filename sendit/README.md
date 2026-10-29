@@ -1,28 +1,28 @@
-# sendit — le produit
+# sendit — the product
 
-L'interface web de conv.ai, et la première brique écrite : **mai à juillet 2016**,
-12 commits. C'est aussi le nom que portait la boîte à ses débuts.
+conv.ai's web app, and the first piece written: **May to July 2016**, 12 commits.
+It is also the name the company went by at the start.
 
-Une application **Meteor 1.3** avec **Angular 1 + Angular Material**. Le squelette vient
-du tutoriel officiel Meteor-Angular — d'où le vocabulaire de `parties` qui traîne encore
-dans `client/parties/` et `model/parties.js`. Greffés dessus : un modèle `prospect`
-et une méthode serveur d'envoi d'e-mail.
+A **Meteor 1.3** application with **Angular 1 and Angular Material**. The skeleton comes
+from the official Meteor-Angular tutorial — which is why the vocabulary of `parties`
+still lingers in `client/parties/` and `model/parties.js`. Grafted onto it: a `prospect`
+model and a server-side email method.
 
 ```
-client/     pages, routes, composants Angular Material
-model/      parties.js (hérité du tutoriel), prospect.js
-server/     méthodes (sendEmail), chargement initial des données
-public/     les visuels — la machine à écrire, les captures du chat
+client/     pages, routes, Angular Material components
+model/      parties.js (inherited from the tutorial), prospect.js
+server/     methods (sendEmail), initial data loading
+public/     the visuals — the typewriter, the chat screenshots
 ```
 
-## Le lancer aujourd'hui
+## Running it today
 
-**Il ne se lance pas en l'état.** `.meteor/release` épingle `METEOR@1.3`, qui tourne sur
-Node 4 et n'a jamais été distribué pour les puces ARM. Trois voies, par coût croissant :
+**It does not start as is.** `.meteor/release` pins `METEOR@1.3`, which runs on Node 4
+and was never shipped for ARM chips. Three routes, by increasing cost:
 
-1. **Servir `public/` en statique** pour revoir l'interface, sans le serveur ni la base.
-2. **Docker en `linux/amd64`** avec une image Meteor d'époque — fidèle, lent, incertain.
-3. **Porter sur Meteor 3**, ce qui veut dire quitter Angular 1 : une réécriture.
+1. **Serve `public/` statically** to see the interface again, without server or database.
+2. **Docker on `linux/amd64`** with a period Meteor image — faithful, slow, uncertain.
+3. **Port to Meteor 3**, which means leaving Angular 1 behind: a rewrite.
 
-Le dossier `public/` vaut le détour même sans serveur : c'est là qu'est resté le soin
-graphique du produit.
+`public/` is worth a look even without a server — that is where the product's visual
+care survived.

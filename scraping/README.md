@@ -1,31 +1,31 @@
-# scraping — la collecte
+# scraping — the collection
 
-De quoi nourrir `blabladata/` : **septembre 2016**.
-Un projet **Scrapy** et trois araignées.
+What fed `blabladata/`: **September 2016**.
+A **Scrapy** project and three spiders.
 
 ```
-spiders/sfr_spider.py      la FAQ et les fils d'entraide SFR — la source principale
-spiders/airbnb_spider.py   le centre d'aide Airbnb
-spiders/google_spider.py   les résultats de recherche
-items.py, pipelines.py     le schéma collecté et son traitement
-format.py                  mise au format (label, phrase) attendu par blabladata
+spiders/sfr_spider.py      SFR's help centre and community threads — the main source
+spiders/airbnb_spider.py   Airbnb's help centre
+spiders/google_spider.py   search results
+items.py, pipelines.py     the collected schema and its processing
+format.py                  into the (label, sentence) format blabladata expects
 ```
 
-Les sorties de l'époque sont restées dans le dépôt : `sfr.json`, `airbnb_tot.json`,
-`link2answer.json`. C'est le seul endroit de conv.ai où il reste des données réelles.
+The outputs from back then are still in the repository: `sfr.json`, `airbnb_tot.json`,
+`link2answer.json`. This is the only place in conv.ai where real data survives.
 
-## Le lancer aujourd'hui
+## Running it today
 
-**Oui.** Scrapy est toujours maintenu et le projet a la structure attendue :
+**Yes.** Scrapy is still maintained and the project has the expected layout:
 
 ```bash
 uv venv && uv pip install scrapy
-scrapy crawl sfr -o sortie.json
+scrapy crawl sfr -o output.json
 ```
 
-Mais **les trois spiders ne ramèneront rien**. Ils visent des sélecteurs CSS et XPath
-écrits en 2016 ; les trois sites ont été refaits depuis, et Google bloque aujourd'hui ce
-genre de collecte. Pour les voir fonctionner, il faut les pointer sur une page figée —
-par exemple le `airbnb.html` conservé ici.
+But **the three spiders will bring back nothing**. They target CSS and XPath selectors
+written in 2016; all three sites have been rebuilt since, and Google now blocks this kind
+of collection outright. To watch them work, point them at a frozen page — the `airbnb.html`
+kept here, for instance.
 
-Les `.pyc` de Python 2 qui étaient versionnés ont été retirés de l'historique.
+The Python 2 `.pyc` files that used to be committed were stripped from the history.

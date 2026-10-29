@@ -1,26 +1,25 @@
-# zendesk — l'intégration au support
+# zendesk — plugging into the support desk
 
-Amener conv.ai là où les équipes support travaillaient déjà : **juillet 2016**, 47 commits.
+Bringing conv.ai where the support teams already worked: **July 2016**, 47 commits.
 
 ```
-zendesk_app_front/    l'app Zendesk : Handlebars (.hdbs), affichée dans la barre latérale
-zendesk_app_back/     le service Python appelé par l'app
-  routes/             les points d'entrée
-  machine_learning/   doc2vec, prétraitement, migration de données
+zendesk_app_front/    the Zendesk app: Handlebars (.hdbs), shown in the sidebar
+zendesk_app_back/     the Python service the app called
+  routes/             the entry points
+  machine_learning/   doc2vec, preprocessing, data migration
   config/
 ```
 
-L'agent ouvrait un ticket, l'app affichait dans sa barre latérale les réponses que le
-modèle jugeait pertinentes. L'agent validait ou corrigeait — et la correction repartait
-en donnée d'entraînement.
+An agent opened a ticket; the app showed, in their sidebar, the answers the model found
+relevant. The agent accepted or corrected — and the correction went back as training data.
 
-## Le lancer aujourd'hui
+## Running it today
 
-**Le back se lance**, c'est du Python sans dépendance exotique ; il faut lui refaire un
-environnement propre.
+**The back end starts.** It is plain Python with no exotic dependency; it just needs a
+clean environment rebuilt around it.
 
-**Le front, non.** C'est une app Zendesk Apps Framework **v1** ; le framework est en v2
-et v1 n'est plus servi. Et même porté, il faudrait une instance Zendesk pour l'afficher.
+**The front end does not.** It is a Zendesk Apps Framework **v1** app; the framework is on
+v2 and v1 is no longer served. And even ported, it would need a Zendesk instance to show it.
 
-Les corpus d'entraînement qui étaient versionnés ici — un extrait Wikipédia de 22 Mo et
-un fichier de phrases de 19 Mo — ont été retirés de l'historique.
+The training corpora that used to be committed here — a 22 MB Wikipedia extract and a
+19 MB sentence file — were stripped from the history.
