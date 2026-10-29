@@ -1,4 +1,13 @@
-# conv.ai
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">
+    <img src="assets/logo.png" alt="conv.ai" width="200">
+  </picture>
+</p>
+
+<p align="center"><i>Répondre aux clients sans humain — Paris, 2016</i></p>
+
+---
 
 Ma première boîte, en 2016. L'idée tenait en une phrase : **utiliser le traitement
 automatique du langage pour répondre aux clients à la place des humains**, à une époque
